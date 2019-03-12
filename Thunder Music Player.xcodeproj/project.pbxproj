@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		106D65BF2238337F00600690 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106D65BE2238337F00600690 /* CoreData.swift */; };
 		10A6A9922237CB1000C82AE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6A9912237CB1000C82AE0 /* AppDelegate.swift */; };
 		10A6A9942237CB1000C82AE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6A9932237CB1000C82AE0 /* ViewController.swift */; };
 		10A6A9972237CB1000C82AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A6A9952237CB1000C82AE0 /* Main.storyboard */; };
 		10A6A99A2237CB1000C82AE0 /* Thunder_Music_Player.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10A6A9982237CB1000C82AE0 /* Thunder_Music_Player.xcdatamodeld */; };
 		10A6A99C2237CB1200C82AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A6A99B2237CB1200C82AE0 /* Assets.xcassets */; };
 		10A6A99F2237CB1200C82AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A6A99D2237CB1200C82AE0 /* LaunchScreen.storyboard */; };
+		10A6A9A82237CE8D00C82AE0 /* Fetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6A9A72237CE8D00C82AE0 /* Fetching.swift */; };
+		10C029E42238386200E20F8A /* SongsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C029E32238386200E20F8A /* SongsObject.swift */; };
+		10C029E722383ADA00E20F8A /* CoreDataTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C029E622383ADA00E20F8A /* CoreDataTester.swift */; };
+		10C029E922383E4900E20F8A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C029E822383E4900E20F8A /* SecondViewController.swift */; };
+		D35173D8B0710421851606D6 /* Pods_Thunder_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED95941B96F31CDCD51D653 /* Pods_Thunder_Music_Player.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		106D65BE2238337F00600690 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		10A6A98E2237CB1000C82AE0 /* Thunder Music Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thunder Music Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A6A9912237CB1000C82AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A6A9932237CB1000C82AE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +31,13 @@
 		10A6A99B2237CB1200C82AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10A6A99E2237CB1200C82AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10A6A9A02237CB1200C82AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10A6A9A72237CE8D00C82AE0 /* Fetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetching.swift; sourceTree = "<group>"; };
+		10C029E32238386200E20F8A /* SongsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsObject.swift; sourceTree = "<group>"; };
+		10C029E622383ADA00E20F8A /* CoreDataTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTester.swift; sourceTree = "<group>"; };
+		10C029E822383E4900E20F8A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		41A956CC92D61CCA15ABB1FE /* Pods-Thunder Music Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunder Music Player.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thunder Music Player/Pods-Thunder Music Player.release.xcconfig"; sourceTree = "<group>"; };
+		4BE6DA41EC7378B5169931FC /* Pods-Thunder Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunder Music Player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Thunder Music Player/Pods-Thunder Music Player.debug.xcconfig"; sourceTree = "<group>"; };
+		BED95941B96F31CDCD51D653 /* Pods_Thunder_Music_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thunder_Music_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35173D8B0710421851606D6 /* Pods_Thunder_Music_Player.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		106D65BD2238336500600690 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				106D65BE2238337F00600690 /* CoreData.swift */,
+				10C029E32238386200E20F8A /* SongsObject.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		10A6A9852237CB1000C82AE0 = {
 			isa = PBXGroup;
 			children = (
 				10A6A9902237CB1000C82AE0 /* Thunder Music Player */,
 				10A6A98F2237CB1000C82AE0 /* Products */,
+				65989ED125EAA575B20C04AC /* Pods */,
+				92707DE4FA14A25ECA6DAC41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +82,9 @@
 		10A6A9902237CB1000C82AE0 /* Thunder Music Player */ = {
 			isa = PBXGroup;
 			children = (
+				10C029E522383AAB00E20F8A /* Testing Group */,
+				106D65BD2238336500600690 /* CoreData */,
+				10A6A9A62237CBEF00C82AE0 /* Fetching Logic */,
 				10A6A9912237CB1000C82AE0 /* AppDelegate.swift */,
 				10A6A9932237CB1000C82AE0 /* ViewController.swift */,
 				10A6A9952237CB1000C82AE0 /* Main.storyboard */,
@@ -63,8 +92,42 @@
 				10A6A99D2237CB1200C82AE0 /* LaunchScreen.storyboard */,
 				10A6A9A02237CB1200C82AE0 /* Info.plist */,
 				10A6A9982237CB1000C82AE0 /* Thunder_Music_Player.xcdatamodeld */,
+				10C029E822383E4900E20F8A /* SecondViewController.swift */,
 			);
 			path = "Thunder Music Player";
+			sourceTree = "<group>";
+		};
+		10A6A9A62237CBEF00C82AE0 /* Fetching Logic */ = {
+			isa = PBXGroup;
+			children = (
+				10A6A9A72237CE8D00C82AE0 /* Fetching.swift */,
+			);
+			path = "Fetching Logic";
+			sourceTree = "<group>";
+		};
+		10C029E522383AAB00E20F8A /* Testing Group */ = {
+			isa = PBXGroup;
+			children = (
+				10C029E622383ADA00E20F8A /* CoreDataTester.swift */,
+			);
+			path = "Testing Group";
+			sourceTree = "<group>";
+		};
+		65989ED125EAA575B20C04AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BE6DA41EC7378B5169931FC /* Pods-Thunder Music Player.debug.xcconfig */,
+				41A956CC92D61CCA15ABB1FE /* Pods-Thunder Music Player.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92707DE4FA14A25ECA6DAC41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BED95941B96F31CDCD51D653 /* Pods_Thunder_Music_Player.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10A6A9A32237CB1200C82AE0 /* Build configuration list for PBXNativeTarget "Thunder Music Player" */;
 			buildPhases = (
+				4BFBA39787EC48579F1A4CFF /* [CP] Check Pods Manifest.lock */,
 				10A6A98A2237CB1000C82AE0 /* Sources */,
 				10A6A98B2237CB1000C82AE0 /* Frameworks */,
 				10A6A98C2237CB1000C82AE0 /* Resources */,
+				529443C3651099D3E14A9D2B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +198,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BFBA39787EC48579F1A4CFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Thunder Music Player-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		529443C3651099D3E14A9D2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Thunder Music Player/Pods-Thunder Music Player-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Thunder Music Player/Pods-Thunder Music Player-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10A6A98A2237CB1000C82AE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C029E922383E4900E20F8A /* SecondViewController.swift in Sources */,
 				10A6A9942237CB1000C82AE0 /* ViewController.swift in Sources */,
+				10A6A9A82237CE8D00C82AE0 /* Fetching.swift in Sources */,
 				10A6A9922237CB1000C82AE0 /* AppDelegate.swift in Sources */,
 				10A6A99A2237CB1000C82AE0 /* Thunder_Music_Player.xcdatamodeld in Sources */,
+				106D65BF2238337F00600690 /* CoreData.swift in Sources */,
+				10C029E722383ADA00E20F8A /* CoreDataTester.swift in Sources */,
+				10C029E42238386200E20F8A /* SongsObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +393,7 @@
 		};
 		10A6A9A42237CB1200C82AE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BE6DA41EC7378B5169931FC /* Pods-Thunder Music Player.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +412,7 @@
 		};
 		10A6A9A52237CB1200C82AE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41A956CC92D61CCA15ABB1FE /* Pods-Thunder Music Player.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

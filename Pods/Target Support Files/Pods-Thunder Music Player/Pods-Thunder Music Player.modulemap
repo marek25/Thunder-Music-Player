@@ -1,0 +1,6 @@
+framework module Pods_Thunder_Music_Player {
+  umbrella header "Pods-Thunder Music Player-umbrella.h"
+
+  export *
+  module * { export * }
+}
