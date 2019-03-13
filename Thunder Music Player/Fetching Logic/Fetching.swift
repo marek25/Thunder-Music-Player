@@ -35,6 +35,11 @@ struct Fetching {
     static var html : String = ""
     
     static func scrapperData(url: String) {
+    
+        
+    var adderSTR = AdderStruct()
+        
+        var temporaryURLs = [String]()
         
         let url = url
         if let initializedURL = URL.init(string: url) {
@@ -57,7 +62,7 @@ struct Fetching {
                         //                let p = try doc.select("p").array()
                         let a  = try doc.select("a").array()
                         //                let link = try a?.attr("href")
-                        //                let textA = try a?.text()
+//                        let textA : Element = try a.text()
                         //                let className = try a?.className()
                         //                let idName = try a?.id()
                         //
@@ -76,6 +81,9 @@ struct Fetching {
                             let titleInLoop = try a.attr("title")
                             let filteredHrefFromA = try a.attr("href")
                             let dataThumb = try a.attr("data-thumb")
+                            
+                            
+                            
                             //                    print("a TAG:\(a)")
                             //                    print("special A: \(specialA)")
                             //                    print("TITLOVI PRE LOOP-A: \(titleInLoop)")
@@ -91,10 +99,8 @@ struct Fetching {
                                 let youtubeVar = "https://www.youtube.com"
                                 
                                 let finalLink =  youtubeVar + filth
-                                
-                                
-                                
-                                
+                              
+                                temporaryURLs.append(finalLink)
                                 urls.append(finalLink)
                                 //                                                        print("TITLES FROM FILTERED URLS: \(titleInLoop)")
                                 print("link from finalLink: \(finalLink)")
@@ -106,13 +112,26 @@ struct Fetching {
                 
             }
             task.resume()
+            
+            AdderStruct.adderLoop(urlList: temporaryURLs)
         }
+        
+       
     }
     
     
     
     
-    func adderLoop(urlList: [String]) {
+    
+    
+    
+}
+
+
+
+struct AdderStruct {
+    
+   static func adderLoop(urlList: [String]) {
         if urlList.count != 0 {
             
             var counter = 0
@@ -141,8 +160,11 @@ struct Fetching {
                                     //                                    self.dbLogic.possibleFunc(name: song, url: url)
                                     //                                    self.tableView.reloadData()
                                     
-//                                    self.dataB.name = song
-//                                    self.dataB.url = url
+                                    
+                                    
+                                    
+                                    //                                    self.dataB.name = song
+                                    //                                    self.dataB.url = url
                                     
                                     //SNIMAJ OVDE
                                 }
@@ -169,13 +191,7 @@ struct Fetching {
         }
         
     }
-    
-    
 }
-
-
-
-
 
 
 

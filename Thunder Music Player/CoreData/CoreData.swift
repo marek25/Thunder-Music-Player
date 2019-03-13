@@ -15,15 +15,19 @@ import UIKit
 struct CoreDataLogic {
     
     
-
+    
+    
+    
     var coreDataResult = [SongsObject]()
     
     var songsList = [Songs]()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-   
     
-    func createData(nameFromLabel: String?){
+    func createData(nameFromLabel: String?, urlFromLabel: String?){
         print("TO WRITE DATA TO CORE DATA")
+        
+        
         
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
@@ -34,15 +38,14 @@ struct CoreDataLogic {
         let SongsEntity = NSEntityDescription.entity(forEntityName: "Songs", in: managedContext)!
         
         guard let nameFromLabel = nameFromLabel else {return}
+        guard let urlFromLabel = urlFromLabel else {return}
         
-        for i in 1...5 {
             let user = NSManagedObject(entity: SongsEntity, insertInto: managedContext)
             
-            user.setValue("name: \(nameFromLabel) \(i)", forKey: "name")
-            user.setValue("url: \(nameFromLabel) \(i)", forKey: "url")
+            user.setValue("name: \(nameFromLabel) ", forKey: "name")
+            user.setValue("url: \(urlFromLabel) ", forKey: "url")
             
-            
-        }
+   
         
         do {
             try managedContext.save()
@@ -56,12 +59,15 @@ struct CoreDataLogic {
     
     
     
-    mutating func retreiveData() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    mutating func retreiveData() -> [SongsObject]? {
+        
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Songs")
+        
+        var listOfSongs = [SongsObject]()
+        
         
         do {
             let result = try managedContext.fetch(fetchRequest)
@@ -70,10 +76,17 @@ struct CoreDataLogic {
                 print(data.value(forKey: "name") as! String)
                 print(data.value(forKey: "url") as! String)
                 
-                guard let name : String = data.value(forKey: "name") as? String else {return}
-                guard let url : String = data.value(forKey: "url") as? String else {return}
+//                guard let name : String = data.value(forKey: "name") as? String else {return}
+//                guard let url : String = data.value(forKey: "url") as? String else {return}
                 
-                coreDataResult.append(SongsObject(name: name, url: url))
+                if let name : String = data.value(forKey: "name") as? String,
+                   let url : String = data.value(forKey: "url") as? String  {
+                    
+                        coreDataResult.append(SongsObject(name: name, url: url))
+
+                        listOfSongs.append(SongsObject(name: name, url: url))
+
+                }
                 
             }
             
@@ -81,7 +94,7 @@ struct CoreDataLogic {
             print("Failed")
         }
         
-        
+        return listOfSongs
     }
     
     
